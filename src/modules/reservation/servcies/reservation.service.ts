@@ -8,10 +8,19 @@ import {
   isWeekend,
 } from 'src/config/helpers/general.helper.functions';
 import { response as responseStructure } from 'src/config/helpers/reponse';
-import { OverstayRateRepository } from 'src/modules/config/repositories/overstay.rates.repository';
-import { RoomTypeRepository } from 'src/modules/config/repositories/room.type.repository';
+import {
+  OverstayRateRepository,
+} from 'src/modules/config/repositories/overstay.rates.repository';
+import {
+  RoomTypeRepository,
+} from 'src/modules/config/repositories/room.type.repository';
 
-import { Body, HttpStatus, Injectable, Res } from '@nestjs/common';
+import {
+  Body,
+  HttpStatus,
+  Injectable,
+  Res,
+} from '@nestjs/common';
 
 import { CheckoutDto } from '../dtos/checkout.dto';
 import { CreateReservationDto } from '../dtos/create.reservation.dto';
@@ -83,7 +92,7 @@ export class ReservationService extends BaseRepository {
           reservation_id: generateSerialNumber(reservation.id),
         },
       );
-      responseData = reservation;
+      responseData = await this.reservationRepository.findOneBy({id:reservation.id});
       message = 'Reservation booked';
       status = true;
       statusCode = HttpStatus.CREATED;
