@@ -1,0 +1,19 @@
+[
+    {
+        "name":"regular",
+        "weekdays_percentage_increase":"7",
+        "weekend_percentage_increase":"10"
+    },
+    {
+        "name":"deluxe",
+        "weekdays_percentage_increase":"8.5",
+        "weekend_percentage_increase":"12"
+    },
+    {
+        "name":"palatial",
+        "weekdays_percentage_increase":"11",
+        "weekend_percentage_increase":"16"
+    }
+]
+
+

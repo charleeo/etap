@@ -1,0 +1,16 @@
+[
+    {
+        "name":"regular",
+        "rate":313.15
+    },
+    {
+        "name":"deluxe",
+        "rate":480.17
+    },
+    {
+        "name":"palatial",
+        "rate":1169.10
+    }
+]
+
+
