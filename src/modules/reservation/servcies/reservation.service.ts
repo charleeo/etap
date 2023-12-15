@@ -156,10 +156,13 @@ export class ReservationService extends BaseRepository {
     );
 
     if (reservation) {
-      await this.updateEntity({ id: reservation.id }, 'id', {
-        overstay_price: overstayCharges,
-        actual_checkout_time: actualCheckoutTime,
-      });
+      await this.reservationRepository.update(
+        { id: reservation.id },
+        {
+          overstay_price: overstayCharges,
+          actual_checkout_time: actualCheckoutTime,
+        },
+      );
 
       const checkoutDetails: Partial<Reservation> =
         await this.reservationRepository.findOneByOrFail({
@@ -167,7 +170,7 @@ export class ReservationService extends BaseRepository {
         });
 
       responseData = checkoutDetails;
-      message = 'Reservation checkedout';
+      message = 'Reservation checked out';
       status = true;
       statusCode = HttpStatus.OK;
     }

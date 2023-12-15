@@ -15,21 +15,6 @@ With your environmment configured,make a copy of the example.env file to a new f
 
 -  npm install  (this will install the project dependencies)
 - npm run migration:run (this will create your database tables)
-- nest start --watch(if you have Nest cli installed),else, run 'npm run start'. This will spinup the development server for you to be able test the project
+- nest start --watch(if you have Nest cli installed),else, run 'npm run start'. This will spin up the development server for you to be able test the project
 
 ## Available API Resources
-
-
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```

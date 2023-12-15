@@ -1,0 +1,10 @@
+QueryFailedError: invalid input syntax for type integer: "{"id":16}"
+    at PostgresQueryRunner.query (C:\backend\nodejs\etap\src\driver\postgres\PostgresQueryRunner.ts:299:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at UpdateQueryBuilder.execute (C:\backend\nodejs\etap\src\query-builder\UpdateQueryBuilder.ts:145:33)
+    at ReservationService.updateEntity (C:\backend\nodejs\etap\src\config\helpers\base.repository.ts:11:20)
+    at ReservationService.checkout (C:\backend\nodejs\etap\src\modules\reservation\servcies\reservation.service.ts:159:7)
+    at ReservationController.checkout (C:\backend\nodejs\etap\src\modules\reservation\controllers\reservation.controller.ts:31:12)
+    at C:\backend\nodejs\etap\node_modules\@nestjs\core\router\router-execution-context.js:46:28
+    at C:\backend\nodejs\etap\node_modules\@nestjs\core\router\router-proxy.js:9:17
+
